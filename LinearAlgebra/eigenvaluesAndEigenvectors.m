@@ -16,5 +16,14 @@ x=P(:,1);
 lambda = D(1,1);
 M*x-lambda*x
 
+x=P(:,2);
+lambda = D(2,2);
+M*x-lambda*x
+
+x=P(:,3);
+lambda = D(3,3);
+M*x-lambda*x
+
+P*D*inv(P)-M % Proof
 
 
