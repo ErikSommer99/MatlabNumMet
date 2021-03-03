@@ -3,9 +3,6 @@
 % m = 2.5 kg and starting speed v_0 = 150 m / s with an angle of 40 degrees above
 % horizontal direction. The air resistance force is F_D = -bv, which b = 0.30.
 
-
-
-
 clear
 
 m = 2.5; % Mass
