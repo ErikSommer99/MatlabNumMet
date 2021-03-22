@@ -1,5 +1,5 @@
 % Script addresses a matrix
 
-T=[0 0 0; -4 3 2; 16 -15 -8];
+T=[1 2 -1 3; 2 1 1 -2];
 
 T=rref(T)
