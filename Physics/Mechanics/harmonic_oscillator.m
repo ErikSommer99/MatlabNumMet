@@ -1,18 +1,14 @@
 clear; clc;
-
 % spring constant
 k = 350;
 % mass of block
 m = 2.0;
-
 % initial position
 x_0 = 0.070;
 % initial velocity
 v_0 = 0.0; % v_0 = 0.0;
-
 % array of initial conditions
 InitCond = [x_0 v_0];
-
 % time interval
 t_int = [0 2];
 
