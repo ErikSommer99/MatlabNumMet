@@ -1,3 +1,5 @@
+% Script that solves motion equation (without damping)
+
 clear; clc;
 % spring constant
 k = 350;
@@ -12,7 +14,7 @@ InitCond = [x_0 v_0];
 % time interval
 t_int = [0 2];
 
-%options = odeset('RelTol',1e-3,'AbsTol',1e-7);
+% options = odeset('RelTol',1e-3,'AbsTol',1e-7);
 
 % Runge-Kutta solver of order 4/5. @ is a pointer to a function.
 % @(t,f_array) Harmonicfun(t,f_array,k,m) points to the function
