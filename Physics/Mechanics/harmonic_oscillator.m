@@ -39,6 +39,16 @@ subplot(2,2,1), plot(T,F(:,1),'-k','LineWidth',2.5),
 xlabel('$t$ (s)','FontSize',18,'VerticalAlignment','Top','Interpreter','latex'),
 ylabel('$x$ (m)','FontSize',18,'Interpreter','latex')
 
+hold on
+
+% Plot position x(t) from analyticaal solution
+t_a = (0:0.05:2);
+x_a = 0.07*cos(13.23*t_a);
+plot(t_a,x_a,'or','LineWidth',1.5)
+
+lh = legend('Num.','An.');
+set(lh,'Interpreter','latex');
+
 subplot(2,2,2), plot(T,F(:,2),'-k','LineWidth',2.5),
 xlabel('$t$ (s)','FontSize',18,'VerticalAlignment','Top','Interpreter','latex'),
 ylabel('$v$ (m/s)','FontSize',18,'Interpreter','latex')
