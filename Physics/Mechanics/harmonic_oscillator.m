@@ -41,7 +41,8 @@ ylabel('$x$ (m)','FontSize',18,'Interpreter','latex')
 
 hold on
 
-% Plot position x(t) from analyticaal solution
+% Plots the analytical solution for x that we found in the same graph
+% window as the numerical solution for x.
 t_a = (0:0.05:2);
 x_a = 0.07*cos(13.23*t_a);
 plot(t_a,x_a,'or','LineWidth',1.5)
