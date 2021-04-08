@@ -7,10 +7,6 @@ k = 350;
 m = 2.0;
 % damping constant
 b = 2.8;
-% external driving force, maximum
-F_m = 0.0;
-% omega
-omega = 1.0*sqrt(k/m);
 % initial position
 x_0 = 0.070;
 % initial velocity
@@ -29,7 +25,7 @@ t_int = [0 2];
 % InitCond of ode45). k and m are treated as constant parameters. T and F
 % are the time points and corresponding solution array produced,
 % respectively.
-[T,F] = ode45(@(t,f_array)Harmfun(t,f_array,k,m,b,F_m,omega),...
+[T,F] = ode45(@(t,f_array)Harmfun_damped(t,f_array,k,m,b),...
     t_int,InitCond);
 
 % Energy of block-spring system
