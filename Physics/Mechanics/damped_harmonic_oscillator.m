@@ -5,8 +5,8 @@ clear; clc;
 k = 350;
 % mass of block
 m = 2.0;
-% damping constant
-b = 2.8;
+% damping constant (km/s)
+b = 110; % b = 2.8;
 % initial position
 x_0 = 0.070;
 % initial velocity
