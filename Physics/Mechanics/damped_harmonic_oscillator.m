@@ -16,15 +16,7 @@ InitCond = [x_0 v_0];
 % time interval
 t_int = [0 2];
 
-% options = odeset('RelTol',1e-3,'AbsTol',1e-7);
-
-% Runge-Kutta solver of order 4/5. @ is a pointer to a function.
-% @(t,f_array) Harmonicfun(t,f_array,k,m) points to the function
-% Harmonicfun and explicitly specifies t and f_array as the first two
-% input arguments (corresponding to the last two arguments t_int and
-% InitCond of ode45). k and m are treated as constant parameters. T and F
-% are the time points and corresponding solution array produced,
-% respectively.
+% Runge-Kutta solver
 [T,F] = ode45(@(t,f_array)Harmfun_damped(t,f_array,k,m,b),...
     t_int,InitCond);
 
@@ -32,8 +24,6 @@ t_int = [0 2];
 E_p = 0.5*k*F(:,1).^2; % Potential energy
 E_k = 0.5*m*F(:,2).^2; % Kinetic energy
 E = E_p + E_k; % Total energy
-
-
 
 hFig = figure(1);
  set(gcf,'PaperPositionMode','auto')
