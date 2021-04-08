@@ -43,14 +43,6 @@ subplot(2,2,1), plot(T,F(:,1),'-k','LineWidth',2.5),
 xlabel('$t$ (s)','FontSize',18,'VerticalAlignment','Top','Interpreter','latex'),
 ylabel('$x$ (m)','FontSize',18,'Interpreter','latex')
 
-hold on
-
-% Plots the analytical solution for x that we found in the same graph
-% window as the numerical solution for x.
-t_a = (0:0.05:2);
-x_a = 0.07*cos(13.23*t_a);
-plot(t_a,x_a,'or','LineWidth',1.5)
-
 lh = legend('Num.','An.');
 set(lh,'Interpreter','latex');
 
